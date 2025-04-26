@@ -1,31 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 20px;
-      }
-      h1 {
-        color: #333;
-      }
-      h2 {
-        color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>LÊ QUANG TOÀN</h1>
-    <h2>Web Developer</h2>
-    <p>Welcome to my portfolio website!</p>
-    <p>Here are some of my projects:</p>  
-  <ul>
-      <li><a href="https://www.facebook.com/quangtoan2000/">Facebook</a></li>
-  </body>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 포트폴리오</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar với dropdown -->
+  <nav class="navbar">
+    <ul class="nav-list">
+  
+      <!-- 나의 소개 -->
+      <li class="nav-item dropdown">
+        <input type="checkbox" id="about_chk" class="dropdown-toggle" />
+        <label for="about_chk" class="nav-label">나의 소개</label>
+        <ul class="dropdown-content">
+          <li><a href="#login">로그인</a></li>
+          <li><a href="#resume">이력서</a></li>
+          <li><a href="#introduction">자기소개서</a></li>
+        </ul>
+      </li>
+  
+      <!-- 프로젝트 -->
+      <li class="nav-item dropdown">
+        <input type="checkbox" id="project_chk" class="dropdown-toggle" />
+        <label for="project_chk" class="nav-label">프로젝트</label>
+        <ul class="dropdown-content">
+          <li><a href="#project1">프로젝트 1</a></li>
+          <li><a href="#project2">프로젝트 2</a></li>
+          <li><a href="#project3">프로젝트 3</a></li>
+        </ul>
+      </li>
+  
+      <!-- 공모전 -->
+      <li class="nav-item dropdown">
+        <input type="checkbox" id="contest_chk" class="dropdown-toggle" />
+        <label for="contest_chk" class="nav-label">공모전</label>
+        <ul class="dropdown-content">
+          <li><a href="#contest1">공모전 1</a></li>
+          <li><a href="#contest2">공모전 2</a></li>
+          <li><a href="#contest3">공모전 3</a></li>
+        </ul>
+      </li>
+  
+      <!-- 경력 -->
+      <li class="nav-item dropdown">
+        <input type="checkbox" id="career_chk" class="dropdown-toggle" />
+        <label for="career_chk" class="nav-label">경력</label>
+        <ul class="dropdown-content">
+          <li><a href="#career1">아르바이트 및 인턴</a></li>
+          <li><a href="#career2">사회봉사 및 연수 2</a></li>
+          <li><a href="#career3">자격증 및 그외 스펙</a></li>
+        </ul>
+      </li>
+  
+      
+  
+    </ul>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="home_section" id="about_me">
+    <div class="sub_hero_text">
+      <h3>웹사이트도 나답게, 제대로 만들자!</h3>
+      <p>세상은 빠르게 변하고, 나만의 색깔을 가진 브랜드가 더욱 주목받는 시대입니다.<br/>
+        이제는 웹사이트도 단순한 정보 전달을 넘어, 나의 가치와 감성을 표현하는 공간이 되어야 합니다.<br/>
+        나를 닮은 웹사이트, 나의 이야기를 담은 디자인.<br/>
+        지금, 진짜 '나'를 보여줄 준비가 되셨나요?
+      </p>
+    </div>
+    <div class="hero_text">
+      Website<br/>Designer
+    </div>
+    <div class="scroll_btn">아래로 스크롤!</div>
+  </section>
+
+
+
+  <!-- Placeholder cho các section con -->
+  
+  
+  <section id="introduction"></section>
+  <section id="contest"></section>
+  <section id="career"></section>
+  <section id="contact"></section>
+
+  <!-- Section login -->
+<section id="login" class="login-section">
+  <div class="login-container">
+    <!-- ... form đăng nhập ... -->
+    <div class="login-container">
+      <h2>로그인</h2>
+      <form class="login-form" action="#" method="post">
+        <div class="form-group">
+          <label for="username">아이디</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="아이디를 입력하세요"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
+        <button type="submit">로그인</button>
+      </form>
+    </div>
+    
+  </div>
+</section>
+
+
+  <!-- Section resume -->
+  <section id="resume" class="resume-section">
+    <div class="resume-container">
+      <h2>이력서</h2>
+      <table class="resume-table">
+        <!-- Thông tin cá nhân & ảnh thẻ -->
+        <tr>
+          <td class="photo-cell" rowspan="4">
+            <img src="assets/img/ảnh thẻ cv.jpg" alt="Ảnh thẻ">
+          </td>
+          <th>이름</th>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <th>연락처</th>
+          <td>010-1234-5678</td>
+        </tr>
+        <tr>
+          <th>이메일</th>
+          <td>hong@example.com</td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td>Seoul, South Korea</td>
+        </tr>
+  
+        <!-- Học vấn -->
+        <tr>
+          <th colspan="3" class="section-header">학력</th>
+        </tr>
+        <tr>
+          <td colspan="3">2020.03 – 2024.02: 서울대학교 컴퓨터공학 학사</td>
+        </tr>
+  
+        <!-- Kinh nghiệm làm việc -->
+        <tr>
+          <th colspan="3" class="section-header">경력</th>
+        </tr>
+        <tr>
+          <td colspan="3">2024.03 – 현재: ABC 회사, 프론트엔드 개발자</td>
+        </tr>
+  
+        <!-- Kỹ năng -->
+        <tr>
+          <th colspan="3" class="section-header">기술 스택</th>
+        </tr>
+        <tr>
+          <td colspan="3">HTML, CSS, JavaScript, React, Node.js</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  
+</body>
 </html>

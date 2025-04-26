@@ -1,0 +1,291 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans Mono', 'Roboto Mono', monospace;
+  background-color: #593E67;
+  color: #B85B56;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #84495F;
+  padding: 15px 5vw;
+  display: flex;
+  justify-content: center;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link,
+.nav-label {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #B85B56;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-label:hover {
+  color: #FEA837;
+}
+
+/* Dropdown toggle checkbox hidden */
+.dropdown-toggle {
+  display: none;
+}
+/* Dropdown menu */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #84495F;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  min-width: 150px;
+  display: none;
+  z-index: 10;
+}
+.dropdown-content li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #B85B56;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-content li a:hover {
+  background-color: #FEA837;
+  color: #593E67;
+}
+/* Show dropdown when checkbox checked */
+#about_chk:checked ~ .dropdown-content {
+  display: block;
+}
+#project_chk:checked ~ .dropdown-content {
+    display:block
+}
+#contest_chk:checked ~ .dropdown-content {
+    display:block
+}
+#career_chk:checked ~ .dropdown-content {
+    display:block
+}
+
+/* Home section */
+.home_section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 5vh 5vw;
+}
+.sub_hero_text h3 {
+  font-size: 4.5vw;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+.sub_hero_text p {
+  width: 35vw;
+  font-size: 1.2rem;
+  margin-top: 2vh;
+  line-height: 1.6;
+}
+.hero_text {
+  font-size: 12vw;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  line-height: 0.8;
+  font-weight: 900;
+  position: absolute;
+  right: 5vw;
+  bottom: 3vh;
+  text-align: right;
+}
+.scroll_btn {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #FEA837;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+/* @keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+} */
+
+/* Secondary Home (ảnh) */
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5E8DD;
+}
+.home-img img {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* --- Khung chứa form đăng nhập --- */
+.login-container {
+    background-color: #84495F;      /* Màu nền tím đậm cho khung */
+    padding: 2rem;                  /* Khoảng cách bên trong 2rem */
+    border-radius: 8px;             /* Bo tròn góc 8px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    max-width: 400px;               /* Chiều rộng tối đa 400px */
+    margin: 2rem auto;              /* Căn giữa khung, cách trên dưới 2rem */
+  }
+  
+  /* --- Tiêu đề của form --- */
+  .login-container h2 {
+    margin-bottom: 1.5rem;          /* Khoảng cách bên dưới tiêu đề */
+    text-align: center;             /* Căn giữa chữ */
+    color: #FEA837;                 /* Màu vàng cam cho tiêu đề */
+    font-size: 1.8rem;              /* Kích thước chữ 1.8rem */
+  }
+  
+  /* --- Khoảng cách giữa các nhóm input --- */
+  .login-form .form-group {
+    margin-bottom: 1rem;            /* Cách dưới mỗi nhóm 1rem */
+  }
+  
+  /* --- Nhãn cho các ô nhập --- */
+  .login-form label {
+    display: block;                 /* Hiển thị thành block để xuống dòng */
+    margin-bottom: 0.5rem;          /* Cách dưới nhãn 0.5rem */
+    color: #B85B56;                 /* Màu chữ tím nhạt */
+    font-weight: 700;               /* Chữ đậm */
+  }
+  
+  /* --- Định dạng ô input --- */
+  .login-form input {
+    width: 100%;                    /* Chiều rộng full container */
+    padding: 0.6rem;                /* Khoảng cách bên trong 0.6rem */
+    border: 1px solid #B85B56;      /* Viền 1px màu tím nhạt */
+    border-radius: 4px;             /* Bo tròn viền 4px */
+    font-size: 1rem;                /* Kích thước chữ 1rem */
+    background-color: #fff;         /* Nền trắng cho input */
+    transition: border-color 0.3s;  /* Hiệu ứng chuyển màu viền */
+  }
+  
+  /* --- Hiệu ứng khi input được focus --- */
+  .login-form input:focus {
+    border-color: #FEA837;          /* Viền chuyển thành vàng cam */
+    outline: none;                  /* Bỏ outline mặc định */
+  }
+  
+  /* --- Nút gửi form --- */
+  .login-form button {
+    width: 100%;                    /* Chiều rộng full container */
+    padding: 0.8rem;                /* Khoảng cách bên trong 0.8rem */
+    margin-top: 1rem;               /* Cách trên nút 1rem */
+    background-color: #FEA837;      /* Màu nền vàng cam */
+    color: #593E67;                 /* Màu chữ tím đậm */
+    border: none;                   /* Bỏ viền mặc định */
+    border-radius: 4px;             /* Bo tròn góc 4px */
+    font-size: 1.1rem;              /* Kích thước chữ 1.1rem */
+    font-weight: 700;               /* Chữ đậm */
+    cursor: pointer;                /* Con trỏ tay khi hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu */
+  }
+  
+  /* --- Hiệu ứng khi hover lên nút --- */
+  .login-form button:hover {
+    background-color: #B85B56;      /* Nền chuyển thành tím nhạt */
+    color: #F5E8DD;                 /* Chữ chuyển thành sáng */
+  }
+
+/* --- Resume Section with Table --- */
+.resume-section {
+    padding: 5vh 5vw;                 /* Đệm xung quanh section */
+    background-color: #FFFFFF;        /* Nền trắng */
+  }
+  
+  .resume-container {
+    max-width: 800px;                 /* Giới hạn chiều rộng */
+    margin: 0 auto;                   /* Căn giữa */
+    padding: 2rem;                    /* Đệm trong */
+    background-color: #F5E8DD;        /* Nền nhạt */
+    border-radius: 8px;               /* Bo góc */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+  }
+  
+  /* Tiêu đề chính của resume */
+  .resume-container h2 {
+    text-align: center;               /* Căn giữa */
+    font-size: 2rem;                  /* Kích thước chữ */
+    color: #593E67;                   /* Màu tím đậm */
+    margin-bottom: 1.5rem;            /* Cách dưới */
+  }
+  
+  /* Bảng resume */
+  .resume-table {
+    width: 100%;                      /* Chiều rộng full container */
+    border-collapse: collapse;        /* Gộp viền */
+  }
+  
+  /* Ô thẻ ảnh */
+  .photo-cell {
+    width: 150px;                     /* Chiều rộng cột ảnh */
+    text-align: center;               /* Căn giữa ảnh */
+    vertical-align: middle;           /* Canh giữa theo chiều dọc */
+  }
+  .photo-cell img {
+    width: 100px;                     /* Chiều rộng ảnh */
+    height: 120px;                    /* Chiều cao cố định */
+    object-fit: cover;                /* Giữ tỉ lệ và cắt nếu cần */
+    border-radius: 4px;               /* Bo góc ảnh */
+    border: 1px solid #B85B56;        /* Viền ảnh màu tím nhạt */
+  }
+  
+  /* Ô dữ liệu và tiêu đề cột */
+  .resume-table th,
+  .resume-table td {
+    border: 1px solid #B85B56;        /* Viền ô màu tím nhạt */
+    padding: 0.75rem;                 /* Đệm trong ô */
+    vertical-align: middle;           /* Canh giữa theo chiều dọc */
+  }
+  
+  /* Header cho mỗi mục (학력, 경력, 기술 스택) */
+  .section-header {
+    background-color: #84495F;        /* Nền tím đậm */
+    color: #FEA837;                   /* Chữ vàng cam */
+    text-align: left;                 /* Căn trái */
+    font-weight: 700;                 /* Chữ đậm */
+  }
+  
+  /* Nội dung mục (dòng colspan) */
+  .resume-table td[colspan] {
+    background-color: #FFF;           /* Nền trắng cho nội dung */
+    color: #333;                      /* Chữ xám đen */
+  }
+  

@@ -1,0 +1,6 @@
+Vai trò | Mã màu | Gợi ý sử dụng
+Màu nền chính | #593E67 | — Làm nền section (đậm), footer, hoặc background chính nếu bạn muốn không gian sâu, sang trọng. — Tránh dùng full-screen; có thể phối với nền trắng ở các phần text-heavy.
+Màu nền phụ | #84495F | — Dùng nền card, banner nhỏ, ô highlight (sidebar, panel phụ). — Tạo độ tương phản nhẹ với nền chính.
+Màu chữ & icon | #B85B56 | — Dùng cho tiêu đề (h2, h3), link, icon mặc định. — Tránh dùng cho đoạn văn bản dài (độ tương phản thấp với nền tối).
+Màu chính (primary) | #DE741C | — Nút chính (Primary button), thanh điều hướng (navbar) khi scroll. — Hover / active state: đậm hơn hoặc opacity cao hơn.
+Màu nhấn (accent / CTA) | #FEA837 | — Nút phụ (Secondary button), badge, thông báo, link hover. — Các thành phần cần thu hút sự chú ý: tag “sale”, icon mới, tooltip.
